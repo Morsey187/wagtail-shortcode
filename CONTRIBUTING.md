@@ -8,6 +8,6 @@ As well as using `tox -e interactive`, the test project can also be ran using `p
 
 `flit install -s` installs the package in development mode, and can sometimes resolve issues.
 
-You can re-create a tox enviroment using the `--recreate` argument, this can be handy when wanting to update enviroments with any package changes. 
+You can re-create a tox enviroment using the `--recreate` argument, this can be handy when wanting to update enviroments with any package changes.
 
 `tox -e python3.11-django4.2-wagtail5.2-sqlite-llm --recreate`
