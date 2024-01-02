@@ -1,0 +1,62 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "wagtail-shortcode"
+authors = [{name = "Ben Morse", email = "96morse@gmail.com"}]
+description = "Draftail Shortcode Entity, adds link-like shortcodes to Draftail."
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Framework :: Wagtail",
+    "Framework :: Wagtail :: 5",
+]
+requires-python = ">=3.8"
+dynamic = ["version"]
+dependencies = [
+    "Django>=4.2",
+    "Wagtail>=5.2"
+]
+[project.optional-dependencies]
+testing = [
+    "dj-database-url==2.1.0",
+    "pre-commit==3.4.0"
+]
+ci = [
+    "tox==4.11.3",
+    "tox-gh-actions==3.1.3"
+]
+
+[project.urls]
+Home = "https://github.com/wagtail/wagtail-shortcode"
+
+[tool.flit.module]
+name = "wagtail_shortcode"
+
+[tool.flit.sdist]
+exclude = [
+    "wagtail_shortcode/static_src",
+    "wagtail_shortcode/test",
+    "wagtail_shortcode/static/wagtail_shortcode/js/.gitignore",
+    "testmanage.py",
+    ".*",
+    "*.js",
+    "*.json",
+    "*.ini",
+    "*.yml"
+]
