@@ -15,7 +15,7 @@ Wagtail shortcode adds a custom Draftail enitity to provide a custom linktype ("
 
 Add 'wagtail_shortcode' to INSTALLED_APPS.
 
-Register a [LinkHandler](https://docs.wagtail.org/en/stable/extending/rich_text_internals.html#rewrite-handlers), to control how the new linktype renders on the page.
+Register a [LinkHandler](https://docs.wagtail.org/en/stable/extending/rich_text_internals.html#rewrite-handlers), to control how the new linktype renders on the front-end (`|richtext` filter).
 
 LinkHandlers must be registered within a wagtail_hooks.py file under an app directory and use an identifier matching `SHORTCODE_ANCHOR_TARGET_IDENTIFIER`, for example:
 
