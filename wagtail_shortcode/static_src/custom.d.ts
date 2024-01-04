@@ -12,6 +12,13 @@ declare module '*.svg' {
 declare global {
   // Wagtail globals
 
+  interface Window {
+    draftail: any;
+    Draftail: any;
+    DraftJS: any;
+    wagtail: any;
+  }
+
   interface WagtailConfig {
     ADMIN_API: {
       PAGES: string;
