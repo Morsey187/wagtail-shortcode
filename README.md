@@ -13,7 +13,7 @@ Wagtail shortcode adds a custom Draftail enitity to provide a custom linktype ("
 - ...
 
 
-Add 'wagtail_shortcode' to INSTALLED_APPS.
+Add `'wagtail_shortcode'` to `INSTALLED_APPS`.
 
 Register a [LinkHandler](https://docs.wagtail.org/en/stable/extending/rich_text_internals.html#rewrite-handlers), to control how the new linktype renders on the front-end (`|richtext` filter).
 
