@@ -42,6 +42,15 @@ def register_shortcode_link(features):
     features.register_link_type(CustomShortcodeLinkHandler)
 ```
 
+Add `shortcode` to the `features` argument of any rich text field where you have overridden the default feature list:
+
+```python
+class Header(models.Model):
+    content = RichTextField(
+        features=["shortcode", "h2", "h3", "bold", "italic", "link"]
+    )
+```
+
 
 ## Configuration
 
