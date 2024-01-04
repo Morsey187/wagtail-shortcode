@@ -1,7 +1,10 @@
 const path = require('path');
+const postcssPresetEnv = require('postcss-preset-env');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './wagtail_shortcode/static_src/main.tsx',
+  plugins: [new MiniCssExtractPlugin()],
   module: {
     rules: [
       {
@@ -10,12 +13,19 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      },
-      {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', options: { importLoaders: 1 } },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [postcssPresetEnv()],
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.svg$/,
@@ -34,7 +44,8 @@ module.exports = {
     /* These are provided by Wagtail */
     'react': 'React',
     'react-dom': 'ReactDOM',
-    'gettext': 'gettext',
+    'draftail': 'Draftail',
+    'draft-js': 'DraftJS',
   },
   output: {
     path: path.resolve(
