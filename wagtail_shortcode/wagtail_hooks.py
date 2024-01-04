@@ -1,29 +1,13 @@
 from django.conf import settings
 from django.utils.html import json_script
 from django.utils.safestring import mark_safe
-
-# TODO confirm version requirements
-from wagtail import VERSION as wagtail_version
 from wagtail import hooks
 from wagtail.admin.rich_text.editors.draftail import features as draftail_features
-
-
-if wagtail_version >= (3, 0):
-    from wagtail import hooks  # noqa
-else:
-    from wagtail.core import hooks
 
 from wagtail_shortcode.handlers import (
     ShortcodeEntityElementHandler,
     shortcode_entity_decorator,
 )
-
-
-# TODO confirm icon choice
-# @hooks.register('register_icons')
-# def register_icons(icons):
-#     icons.append('wagtaildraftailanchors/icons/icon_name.svg')
-#     return icons
 
 
 @hooks.register("register_rich_text_features")
@@ -39,8 +23,7 @@ def register_stock_feature(features):
 
     control = {
         "type": type_,
-        # 'icon': 'link',
-        "label": " Shortcode",  # TODO confirm label or icon
+        "label": " SC",
         "description": "Shortcode link",
     }
 
@@ -77,7 +60,7 @@ def shortcode_editor_js():
     - This will output something similar to the following on the admin front-end:
       <script id="wagtail-shortcode-config" type="application/json">{"helpText": "Add a shortcode link"}</script>
     """
-    default_help_text = "Add a shortcode link"
+    default_help_text = "Add a Short Code Link"
 
     help_text = getattr(settings, "SHORTCODE_HELP_TEXT", default_help_text)
 

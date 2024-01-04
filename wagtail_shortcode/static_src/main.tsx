@@ -77,7 +77,7 @@ class ShortcodeSource extends window.React.Component {
 
 const getAnchorIdentifierAttributes = (data: any) => {
   const value = data.shortcode || null;
-  const icon = <Icon name="link" />; // TODO confirm inline icon used in editor (requried)
+  const icon = <Icon name="link" />;
 
   return {
     url: value,
