@@ -56,7 +56,7 @@ class Header(models.Model):
 
 ### Updating the window prompt's help-text
 
-When adding shortcode within the editor, a window prompt will appear, the text within this prompt can be customised by providing a value for SHORTCODE_HELP_TEXT within your project's settings file. This can be helpful as to inform editors of the expected behaviour of your custom LinkHandler.
+When adding shortcode within the editor, a window prompt will appear, the text within this prompt can be customised by providing a value for `SHORTCODE_HELP_TEXT` within your project's settings file. This can be helpful as to inform editors of the expected behaviour of your custom LinkHandler.
 
 `SHORTCODE_HELP_TEXT="Enter a shortcode value"`
 
