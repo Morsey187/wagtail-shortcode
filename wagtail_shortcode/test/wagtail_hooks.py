@@ -10,7 +10,7 @@ class ShortIdentifierLinkHandler(LinkHandler):
 
     @classmethod
     def expand_db_attributes(cls, attrs):
-        href = attrs["href"]
+        href = attrs["shortcode"]
         return '<a href="%s" linktype="shortcode">' % escape(href)
 
 

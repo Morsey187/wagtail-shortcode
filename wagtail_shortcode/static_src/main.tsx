@@ -38,8 +38,8 @@ class ShortcodeSource extends window.React.Component {
 
     if (entity && entityKey) {
       // If an existing entity get the shortcode value to provide as default
-      const { href } = entity.getData();
-      defaultValue = href;
+      const { shortcode } = entity.getData();
+      defaultValue = shortcode;
     }
 
     const { helpText } = getShortcodeConfig();
@@ -53,7 +53,7 @@ class ShortcodeSource extends window.React.Component {
         entityType.type,
         'MUTABLE',
         {
-          href: shortcodeValue,
+          shortcode: shortcodeValue,
         },
       );
       const lastCreatedEntityKey = contentWithEntity.getLastCreatedEntityKey();
@@ -76,13 +76,13 @@ class ShortcodeSource extends window.React.Component {
 }
 
 const getAnchorIdentifierAttributes = (data: any) => {
-  const shortcodeValue = data.href || null;
+  const value = data.shortcode || null;
   const icon = <Icon name="link" />; // TODO confirm inline icon used in editor (requried)
 
   return {
-    url: shortcodeValue,
+    url: value,
     icon,
-    label: shortcodeValue,
+    label: value,
   };
 };
 

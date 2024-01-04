@@ -16,7 +16,7 @@ def shortcode_entity_decorator(props):
     return DOM.create_element(
         "a",
         {
-            "href": props.get("href"),  # the shortcode value
+            "shortcode": props.get("shortcode"),
             "linktype": SHORTCODE_ANCHOR_TARGET_IDENTIFIER,
         },
         props["children"],
@@ -33,6 +33,6 @@ class ShortcodeEntityElementHandler(InlineEntityElementHandler):
 
     def get_attribute_data(self, attrs):
         return {
-            "href": attrs.get("href"),
+            "shortcode": attrs.get("shortcode"),
             "linktype": SHORTCODE_ANCHOR_TARGET_IDENTIFIER,
         }

@@ -32,7 +32,7 @@ class CustomShortcodeLinkHandler(LinkHandler):
 
     @classmethod
     def expand_db_attributes(cls, attrs):
-        href = attrs["href"]
+        href = attrs["shortcode"]
         # Do something clever
         return '<a href="%s">' % escape(href)
 
