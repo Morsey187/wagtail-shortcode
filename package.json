@@ -1,6 +1,6 @@
 {
   "name": "wagtail-shortcode",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Draftail Shortcode Entity, adds link-like shortcodes to Draftail.",
   "main": "wagtail_shortcode/static_src/main.tsx",
   "scripts": {

@@ -16,6 +16,17 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Build static files
+        run: ./node_modules/.bin/webpack --mode production
+
       - name: Set up Python 3.11
         uses: actions/setup-python@v4
         with:

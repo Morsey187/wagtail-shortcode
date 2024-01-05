@@ -49,6 +49,9 @@ Home = "https://github.com/wagtail/wagtail-shortcode"
 name = "wagtail_shortcode"
 
 [tool.flit.sdist]
+include = [
+    "wagtail_shortcode/static"
+]
 exclude = [
     "wagtail_shortcode/static_src",
     "wagtail_shortcode/test",
