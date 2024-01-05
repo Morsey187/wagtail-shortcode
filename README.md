@@ -4,7 +4,7 @@ Wagtail shortcode adds a custom Draftail enitity to provide a custom linktype ("
 
 [![License: BSD-3-Clause](https://img.shields.io/badge/License-BSD--3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![PyPI version](https://badge.fury.io/py/wagtail-shortcode.svg)](https://badge.fury.io/py/wagtail-shortcode)
-[![shortcode CI](https://github.com/wagtail/wagtail-shortcode/actions/workflows/test.yml/badge.svg)](https://github.com/wagtail/wagtail-shortcode/actions/workflows/test.yml)
+[![shortcode CI](https://github.com/Morsey187/wagtail-shortcode/actions/workflows/test.yml/badge.svg)](https://github.com/Morsey187/wagtail-shortcode/actions/workflows/test.yml)
 
 
 ## Installation

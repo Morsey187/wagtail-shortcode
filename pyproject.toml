@@ -43,7 +43,7 @@ ci = [
 ]
 
 [project.urls]
-Home = "https://github.com/wagtail/wagtail-shortcode"
+Home = "https://github.com/Morsey187/wagtail-shortcode"
 
 [tool.flit.module]
 name = "wagtail_shortcode"

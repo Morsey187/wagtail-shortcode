@@ -5,7 +5,7 @@
 To make changes to this project, first clone this repository:
 
 ```sh
-git clone https://github.com/wagtail/wagtail-shortcode.git
+git clone https://github.com/Morsey187/wagtail-shortcode.git
 cd wagtail-shortcode
 ```
 
