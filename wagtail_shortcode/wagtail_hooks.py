@@ -11,7 +11,7 @@ from wagtail_shortcode.handlers import (
 
 
 @hooks.register("register_rich_text_features")
-def register_stock_feature(features):
+def register_shortcode_feature(features):
     features.default_features.append("shortcode")
     """
     Registering the `shortcode` feature, which uses the `SHORTCODE` Draft.js entity type,
