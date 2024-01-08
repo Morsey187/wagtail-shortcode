@@ -23,7 +23,7 @@ def register_shortcode_feature(features):
 
     control = {
         "type": type_,
-        "label": " SC",
+        "label": "SCL",
         "description": "Shortcode link",
     }
 
