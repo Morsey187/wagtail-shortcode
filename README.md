@@ -1,6 +1,6 @@
 # Wagtail shortcode
 
-Wagtail shortcode adds a custom Draftail enitity to provide a custom linktype ("shortcode"), giving you the ability to assign values in a similar way to normal links as well as decide how they should be rendered on the page.
+Wagtail shortcode adds a custom Draftail entity to provide a custom linktype ("shortcode"), giving you the ability to assign values in a similar way to normal links as well as decide how they should be rendered on the page.
 
 [![License: BSD-3-Clause](https://img.shields.io/badge/License-BSD--3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![PyPI version](https://badge.fury.io/py/wagtail-shortcode.svg)](https://badge.fury.io/py/wagtail-shortcode)
